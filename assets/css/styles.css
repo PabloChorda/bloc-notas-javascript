@@ -9,136 +9,114 @@ body{
 }
 
 .layout{
-    width: 100%;
-    height: 100%;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    min-height: 100%;
     background-color: #F7F8FD;
+    padding: 3rem;
 }
 
-.main__bank{
-    width: 80rem;
-    background-color: #fff;
-    padding: 5rem;
-}
-
-.bank__header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 1.5rem;
-    border: 1px solid #d3d3d3;
-    box-shadow: 0px opx 10px #d3d3d3;
-    border-radius: 5px;
-    margin-bottom: 4rem;
-    line-height: 1;
-}
-
-.header__number{
-    font-weight: 600;
-    color: #444;
-}
-
-.header__money{
-    font-size: 4rem;
-}
-
-.list__item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #d3d3d3;
-    padding: 2rem 0;
-}
-
-.item__left{
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.item__ico{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-right: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 10rem;
-    border: 1px solid #6A6AEA;
-    color: #6A6AEA;
-}
-
-.item__container{
-    width: 65%;
-}
-
-.item__title{
-    line-height: 1.2;
-    font-weight: 600;
-}
-
-.item__date{
-    font-size: 1.4rem;
-    color: #b7b7b7;
-}
-
-.item__right{
-    width: 15%;
-}
-
-.item__bill{
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: right;
-    color: #CD4E4F;
-}
-
-.item__total{
-    font-size: 1.4rem;
-    color: #b7b7b7 ;
-    text-align: right;
-}
-
-@keyframes load {
-    
-    0%{
-        background-position: 50% 0;
-    }
-
-    100%{
-        background-position: -150% 0 ;
-    }
-}
-
-.bg-load{
-    background-image: linear-gradient(to right,
-    #7872ec 0%,
-    #857ff1 10%,
-    #8e89ec 20%,
-    #938ee7 100%
-    );
-    background-size: 200% 100%;
-    animation: load 1s linear infinite;
-}
-
-.bg-load-text{
-    border-radius: 5rem;
-    display: inline-block;
-    height: 1rem;
+.layout__main{
     width: 100%;
 }
 
-.bank__header .bg-load-text{
-    width: 40%;
+.main__container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.list__item .bg-load-text{
-    height: 1.4rem;
+.main__btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ED4F4F;
+    padding: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 300ms linear;
 }
+
+.main__btn:hover{
+    background-color: #bf3f3f;
+}
+
+.btn__icon{
+    font-size: 1.4rem;
+}
+.btn__text{
+    font-weight: 500;
+}
+
+.main__notes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.notes__note{
+    width: calc(25% - 2rem);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 300ms linear;
+}
+
+.note--visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.note--visible-no-transition{
+    opacity: 1;
+    transform: scale(1);
+    transition: none;
+}
+
+.note__header{
+    color: #fff;
+    background-color: #ED4F4F;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header__input{
+    background-color: transparent; 
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header__input::placeholder {
+    color: #fff;
+    opacity: 1; 
+}
+
+
+.note__icon{
+    cursor: pointer;
+}
+
+.note__body{
+    width: 100%;
+    height: 40rem;
+    border-radius: 0 0 5px 5px;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 2rem;
+    font-weight: 500;
+    background-color: #dedcdc;
+    text-align: left;
+}
+
+
